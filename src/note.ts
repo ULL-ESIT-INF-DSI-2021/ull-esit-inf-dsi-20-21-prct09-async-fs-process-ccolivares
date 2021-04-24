@@ -1,8 +1,25 @@
+//import * as fs from 'fs';
+//import * as chalk from 'chalk';
+//import * as yargs from 'yargs';
 
+type Color = "Red" | "Green" | "Yellow" | "Blue"
 
-type Color = "Azul" | "Verde" | "Magenta" | "Amarillo"
 
 export class Note {
-  constructor(private name: string,  private food: Map<Food, number>, private category: Category){
+  constructor(private title: string,  private text: string, private color: Color){
+  }
+
+  getTitle() {
+    return this.title
+  }
+
+  getText() {
+    return this.text
+  }
+
+  getColor() {
+    return this.color
   }
 }
+
+console.log("Estoy funcionando");
