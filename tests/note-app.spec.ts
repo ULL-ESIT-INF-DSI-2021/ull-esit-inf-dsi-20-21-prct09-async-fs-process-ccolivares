@@ -10,7 +10,7 @@ let noteBlue = new Note("Titulo azul", "Soy una nota azul", "Blue")
 
 describe('Comprobación del método spacestoBars()', () => {
   it('Comprobación de que convierte correctamente las cadenas', () => {
-    expect(noteApp.spacesToBars(noteRed.getTitle())).to.be.equal("Título_rojo");
+    expect(noteApp.spacesToBars(noteRed.getTitle())).to.be.equal("Titulo_rojo");
   });
 });
 
