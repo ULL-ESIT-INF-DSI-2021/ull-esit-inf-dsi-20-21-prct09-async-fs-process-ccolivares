@@ -3,10 +3,10 @@ import {expect} from 'chai';
 import { Note } from '../src/note';
 import * as noteApp from '../src/note-app';
 
-let noteRed = new Note("Título rojo", "Soy una nota roja", "Red")
-let noteGreen = new Note("Título verde", "Soy una nota verde", "Green")
-let noteYellow = new Note("Título amarillo", "Soy una nota amarilla", "Yellow")
-let noteBlue = new Note("Título azul", "Soy una nota azul", "Blue")
+let noteRed = new Note("Titulo rojo", "Soy una nota roja", "Red")
+let noteGreen = new Note("Titulo verde", "Soy una nota verde", "Green")
+let noteYellow = new Note("Titulo amarillo", "Soy una nota amarilla", "Yellow")
+let noteBlue = new Note("Titulo azul", "Soy una nota azul", "Blue")
 
 describe('Comprobación del método spacestoBars()', () => {
   it('Comprobación de que convierte correctamente las cadenas', () => {
@@ -44,7 +44,7 @@ describe('Comprobación del método readNotes()', () => {
     noteApp.readNotes("edusegre", noteRed.getTitle());
   });
   it('Comprobación de que la nota no existe', () => {
-    noteApp.readNotes("ccolivares", "Título auxiliar");
+    noteApp.readNotes("ccolivares", "Titulo auxiliar");
   });
 });
 
@@ -56,7 +56,7 @@ describe('Comprobación del método removeNotes()', () => {
     noteApp.removeNotes("edusegre", noteRed.getTitle());
   });
   it('Comprobación de que la nota no existe', () => {
-    noteApp.removeNotes("ccolivares", "Título auxiliar");
+    noteApp.removeNotes("ccolivares", "Titulo auxiliar");
   });
 });
 
