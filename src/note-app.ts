@@ -5,6 +5,9 @@ import { Note } from './note';
 
 // type Color = "Red" | "Green" | "Yellow" | "Blue"
 
+/**
+ * Creación de la opción "add" para la línea de comandos. Crea una nueva nota.
+ */
 yargs.command({
   command: 'add',
   describe: 'Add a new note',
@@ -41,6 +44,9 @@ yargs.command({
   },
 });
 
+/**
+ * Creación de la opción "list" para la línea de comandos. Enlista los títulos de las notas de un usuario en concreto.
+ */
 yargs.command({
   command: 'list',
   describe: 'List notes',
@@ -58,6 +64,9 @@ yargs.command({
   },
 });
 
+/**
+ * Creación de la opción "read" para la línea de comandos. Lee una nota en específico. Necesita conocer el título de la misma.
+ */
 yargs.command({
   command: 'read',
   describe: 'Read all user notes',
@@ -80,6 +89,9 @@ yargs.command({
   },
 });
 
+/**
+ * Creación de la opción "remove" para la línea de comandos. Elimina una nota. Necesita saber el título de la misma.
+ */
 yargs.command({
   command: 'remove',
   describe: 'Remove a note',
@@ -107,7 +119,9 @@ yargs.command({
   },
 });
 
-
+/**
+ * Creación de la opción "modify" para la línea de comandos. Modifica cualquier parámetro de una nota.
+ */
 yargs.command({
   command: 'modify',
   describe: 'Modify a note',
@@ -143,6 +157,11 @@ yargs.command({
 
 yargs.parse();
 
+/**
+ * Método que sustituye los espacios de una cadena por barras bajas, se utilizará para escribir correctamente los nombres de los archivos.
+ * @param title Cadena correspondiente al título de una nota, el cual pasará a ser el nombre del archivo.
+ * @returns Devuelve la cadena corregida con las barras bajas.
+ */
 function spacesToBars(title: string): string {
   
   let auxString: string = "";
@@ -157,30 +176,40 @@ function spacesToBars(title: string): string {
   return auxString;
 }
 
+/**
+ * Este método añade nuevas notas para usuarios en concreto. Estas se trabajarán en formato JSON. Este comprobará también la existencia del usuario,
+ * en el caso de ser un usuario nuevo creará un nuevo directorio para el mismo.
+ * @param user Usuario que crea la nota.
+ * @param note Objeto nota con todas las características de la misma. 
+ */
 function addNewNote(user: string, note: Note) {  
   
   let title: string = spacesToBars(note.getTitle())
   let userRoute: string = "notes/" + user;
   let fileRoute: string = "notes/" + user + "/" + title + ".json";
   
-  if (fs.existsSync(userRoute)) { // El usuario existe
-    if (fs.existsSync(fileRoute)) { // La nota existe, salta un error
+  if (fs.existsSync(userRoute)) { 
+    if (fs.existsSync(fileRoute)) { 
       console.log(chalk.red("Error: la nota ya existe."));
     }
-    else { // La nota no existe, se crea
+    else { 
       let JSONtext = {"user": user, "title": note.getTitle(), "text": note.getText(), "color": note.getColor()};
       let JSONstring: string = JSON.stringify(JSONtext);
       fs.writeFileSync(fileRoute, JSONstring);
     }
   }
-  else { // El usuario no existe
-    fs.mkdirSync(userRoute); // Se crea el directorio
+  else {
+    fs.mkdirSync(userRoute); 
     let JSONtext = {"user": user, "title": note.getTitle(), "text": note.getText(), "color": note.getColor()};
     let JSONstring: string = JSON.stringify(JSONtext);
-    fs.writeFileSync(fileRoute, JSONstring); // Se crea la nota
+    fs.writeFileSync(fileRoute, JSONstring);
   }
 }
 
+/**
+ * El método listNotes mostrará una lista con los nombres de las notas de un usuario en concreto. Se mostrará el título de la misma con su color correspondiente
+ * @param user Usuario de las notas que se mostrarán.
+ */
 function listNotes(user: string) {
   let userRoute: string = "notes/" + user;
   
@@ -200,6 +229,11 @@ function listNotes(user: string) {
   
 }
 
+/**
+ * Este método mostrará por pantalla la nota que le indiquemos.
+ * @param user Usuario dueño de la nota.
+ * @param title Título de la nota.
+ */
 function readNotes(user: string, title: string) {
   let auxtitle: string = spacesToBars(title)
   let userRoute: string = "notes/" + user;
@@ -222,6 +256,11 @@ function readNotes(user: string, title: string) {
   }
 }
 
+/**
+ * El método eliminará la nota que le indiquemos.
+ * @param user Usuario dueño de la nota.
+ * @param title Título de la nota.
+ */
 function removeNotes(user: string, title: string) {
   
   let auxtitle: string = spacesToBars(title)
@@ -240,6 +279,11 @@ function removeNotes(user: string, title: string) {
   }
 }
 
+/**
+ * Este método realizará una modificacion de la nota que se indique. Se sustituirán los datos de la nota antigua por la nueva.
+ * @param user Usuario dueño de la nota.
+ * @param note Objeto tipo Note con todas las características de la nota nueva.
+ */
 function modifyNote(user: string, note: Note) {
 
   let auxtitle: string = spacesToBars(note.getTitle())
