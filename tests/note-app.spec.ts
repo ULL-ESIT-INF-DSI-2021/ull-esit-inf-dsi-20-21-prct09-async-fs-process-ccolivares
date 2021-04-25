@@ -3,6 +3,7 @@ import {expect} from 'chai';
 import { Note } from '../src/note';
 import * as noteApp from '../src/note-app';
 
+
 let noteRed = new Note("Titulo rojo", "Soy una nota roja", "Red")
 let noteGreen = new Note("Titulo verde", "Soy una nota verde", "Green")
 let noteYellow = new Note("Titulo amarillo", "Soy una nota amarilla", "Yellow")
@@ -71,3 +72,6 @@ describe('Comprobación del método modifyNote()', () => {
     noteApp.modifyNote("ccolivares", noteYellow);
   });
 });
+
+noteApp.removeNotes("spicca", noteGreen.getTitle());
+

@@ -269,13 +269,16 @@ export function removeNotes(user: string, title: string) {
   if (fs.existsSync(userRoute)) {
     if (fs.existsSync(fileRoute)) {
       fs.rmSync(fileRoute);
+      if (fs.readdirSync(userRoute) == [])
+        fs.rmSync(userRoute)
     }
     else
-      console.log(chalk.red("Error. La nota no existe"))
+    console.log(chalk.red("Error. La nota no existe"))
   }
   else {
     console.log(chalk.red("Error. El usuario no existe"))
   }
+
 }
 
 /**
