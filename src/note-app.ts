@@ -162,7 +162,7 @@ yargs.parse();
  * @param title Cadena correspondiente al título de una nota, el cual pasará a ser el nombre del archivo.
  * @returns Devuelve la cadena corregida con las barras bajas.
  */
-function spacesToBars(title: string): string {
+export function spacesToBars(title: string): string {
   
   let auxString: string = "";
 
@@ -182,7 +182,7 @@ function spacesToBars(title: string): string {
  * @param user Usuario que crea la nota.
  * @param note Objeto nota con todas las características de la misma. 
  */
-function addNewNote(user: string, note: Note) {  
+export function addNewNote(user: string, note: Note) {  
   
   let title: string = spacesToBars(note.getTitle())
   let userRoute: string = "notes/" + user;
@@ -210,7 +210,7 @@ function addNewNote(user: string, note: Note) {
  * El método listNotes mostrará una lista con los nombres de las notas de un usuario en concreto. Se mostrará el título de la misma con su color correspondiente
  * @param user Usuario de las notas que se mostrarán.
  */
-function listNotes(user: string) {
+export function listNotes(user: string) {
   let userRoute: string = "notes/" + user;
   
   if (fs.existsSync(userRoute)) {
@@ -226,7 +226,6 @@ function listNotes(user: string) {
   else {
     console.log(chalk.red("Error. El usuario no existe"))
   }
-  
 }
 
 /**
@@ -234,7 +233,7 @@ function listNotes(user: string) {
  * @param user Usuario dueño de la nota.
  * @param title Título de la nota.
  */
-function readNotes(user: string, title: string) {
+export function readNotes(user: string, title: string) {
   let auxtitle: string = spacesToBars(title)
   let userRoute: string = "notes/" + user;
   let fileRoute: string = "notes/" + user + "/" + auxtitle + ".json";
@@ -261,7 +260,7 @@ function readNotes(user: string, title: string) {
  * @param user Usuario dueño de la nota.
  * @param title Título de la nota.
  */
-function removeNotes(user: string, title: string) {
+export function removeNotes(user: string, title: string) {
   
   let auxtitle: string = spacesToBars(title)
   let userRoute: string = "notes/" + user;
@@ -284,7 +283,7 @@ function removeNotes(user: string, title: string) {
  * @param user Usuario dueño de la nota.
  * @param note Objeto tipo Note con todas las características de la nota nueva.
  */
-function modifyNote(user: string, note: Note) {
+export function modifyNote(user: string, note: Note) {
 
   let auxtitle: string = spacesToBars(note.getTitle())
   let userRoute: string = "notes/" + user;

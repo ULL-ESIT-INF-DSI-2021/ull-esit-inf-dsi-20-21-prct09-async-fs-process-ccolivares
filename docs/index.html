@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>github-actions-sonar-cloud</title>
-	<meta name="description" content="Documentation for github-actions-sonar-cloud">
+	<title>ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares</title>
+	<meta name="description" content="Documentation for ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">github-actions-sonar-cloud</a>
+					<a href="index.html" class="title">ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>github-actions-sonar-cloud</h1>
+			<h1>ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares</h1>
 		</div>
 	</div>
 </header>
@@ -58,26 +58,86 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#calidad-y-seguridad-del-código-fuente-mediante-sonar-cloud" id="calidad-y-seguridad-del-código-fuente-mediante-sonar-cloud" style="color: inherit; text-decoration: none;">
-					<h2>Calidad y seguridad del código fuente mediante Sonar Cloud</h2>
+				<a href="#desarrollo-de-sistemas-informáticos" id="desarrollo-de-sistemas-informáticos" style="color: inherit; text-decoration: none;">
+					<h1>DESARROLLO DE SISTEMAS INFORMÁTICOS</h1>
 				</a>
-				<p align="center">
-					<a href="https://github.com/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud/blob/master/LICENSE">
-						<img alt="GitHub" src="https://img.shields.io/github/license/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud">
-					</a>
-					<a href="https://github.com/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud/actions/workflows/tests.yml">
-						<img alt="Tests" src="https://github.com/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud/actions/workflows/tests.yml/badge.svg">
-					</a>
-					<a href='https://coveralls.io/github/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud?branch=main'>
-						<img src='https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2021/github-actions-sonar-cloud/badge.svg?branch=main' alt='Coverage Status' />
-					</a>
-					<a href='https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_github-actions-sonar-cloud'>
-						<img src='https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_github-actions-sonar-cloud&metric=alert_status' alt='Quality Gate Status' />
-					</a>
-				</p>
-				<p>En este repositorio se aloja un ejemplo sencillo que ilustra el uso de la herramienta Sonar Cloud para comprobar la calidad
-					y seguridad del código fuente a través del uso de <a href="https://docs.github.com/en/actions">GitHub Actions</a>. En concreto, se usa
-				la <a href="https://github.com/marketplace/actions/sonarcloud-scan">GitHub Action de Sonar Cloud</a>.</p>
+				<p><a href="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares/actions/workflows/tests.yml"><img src="https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares/actions/workflows/tests.yml/badge.svg" alt="Tests"></a> <a href="https://sonarcloud.io/dashboard?id=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares"><img src="https://sonarcloud.io/api/project_badges/measure?project=ULL-ESIT-INF-DSI-2021_ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares&metric=alert_status" alt="Quality Gate Status"></a> <a href="https://coveralls.io/github/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares?branch=main"><img src="https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-ccolivares/badge.svg?branch=main" alt="Coverage Status"></a></p>
+				<a href="#práctica-8-aplicación-de-procesamiento-de-notas-de-texto" id="práctica-8-aplicación-de-procesamiento-de-notas-de-texto" style="color: inherit; text-decoration: none;">
+					<h2>Práctica 8: Aplicación de procesamiento de notas de texto</h2>
+				</a>
+				<a href="#introducción" id="introducción" style="color: inherit; text-decoration: none;">
+					<h3>Introducción</h3>
+				</a>
+				<p>En esta práctica implementaremos una aplicación que procesará notas de texto. Podremos añadir, enlistar, leer, modificar o eliminar notas de un usuario concreto. Para procesar esta información trabajaremos con el formato <strong>JSON</strong>. Para controlar nuestra aplicación utilizaremos la entrada de comandos apoyándonos en el paquete <a href="https://www.npmjs.com/package/yargs">Yarg</a>.
+				De igual forma utilizaremos la API Síncrona de <strong>Node.js</strong> para el control del sistema de archivos.</p>
+				<a href="#desarrollo" id="desarrollo" style="color: inherit; text-decoration: none;">
+					<h3>Desarrollo</h3>
+				</a>
+				<p>Para desarollar esta práctica hemos hecho uso de dos archivos, uno de ellos contendrá la clase nota, el otro contendrá el funcionamiento en sí de nuesta aplicación.</p>
+				<a href="#notets" id="notets" style="color: inherit; text-decoration: none;">
+					<h4><a href="./src/note.ts">Note.ts</a></h4>
+				</a>
+				<p>Este archivo contendrá la clase Note, la cual creará objetos de tipo <code>Note</code> que guardarán el título, cuerpo de la nota y el color de la misma en sus atributos. </p>
+				<p>Esta también contendrá los métodos necesarios para imprimir el contenido de las notas con el color correspondiente utilizando el paquete <a href="https://www.npmjs.com/package/chalk">Chalk</a>, que se encargará de darle formato al texto que le proporcionemos.</p>
+				<p>El método <code>printTitle()</code> filtrará el título de la nota e imprimirá el contenido de este con el color correspondiente utilizando <a href="https://www.npmjs.com/package/chalk">Chalk</a>. Igual que este, el método <code>printText()</code> realizará lo mismo pero en este caso filtrando el texto de la nota.</p>
+				<a href="#note-appts" id="note-appts" style="color: inherit; text-decoration: none;">
+					<h4><a href="./src/note-app.ts">Note-app.ts</a></h4>
+				</a>
+				<p>Este archivo realizará toda la funcionalidad de nuestra aplicación de notas, la lectura de distintas opciones por comandos en la terminal y la funcionalidad de estos añadidos. Para la distinción entre usuarios nuestra aplicación creará un directorio para cada uno de ellos, dentro de este estarán las notas correspondientes al usuario en archivos <strong>j.son</strong> con los datos de las mismas en formato <strong>JSON</strong>.</p>
+				<p>Para añadir estas opciones utilizaremos el paquete <a href="https://www.npmjs.com/package/yargs">Yarg</a> el cual permitirá añadir opciones a nuestro comando de compilación <code>node</code>. Utilizaremos opciones distintas para cada una de las funcionalidades de nuestro programa, las cuales serán añadir, enlistar, leer, modificar o eliminar notas. Esta será su sintaxis: </p>
+				<pre><code class="language-bash"><span style="color: #000000">// AÑADIR UNA NOTA</span>
+<span style="color: #000000">$ node [ruta del archivo a compilar] add --user=</span><span style="color: #A31515">&quot;usuario&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;titulo de la nota&quot;</span><span style="color: #000000"> --text=</span><span style="color: #A31515">&quot;contenido de la nota&quot;</span><span style="color: #000000"> --color=</span><span style="color: #A31515">&quot;color de la nota (red, green, yellow, blue)&quot;</span>
+
+<span style="color: #000000">// ENLISTAR LAS NOTAS DE UN USUARIO</span>
+<span style="color: #000000">$ node [ruta del archivo a compilar] list --user=</span><span style="color: #A31515">&quot;usuario&quot;</span>
+
+<span style="color: #000000">// LEER UNA NOTA</span>
+<span style="color: #000000">$ node [ruta del archivo a compilar] </span><span style="color: #795E26">read</span><span style="color: #000000"> --user=</span><span style="color: #A31515">&quot;usuario&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;titulo de la nota&quot;</span>
+
+<span style="color: #000000">// ELIMINAR UNA NOTA</span>
+<span style="color: #000000">$ node [ruta del archivo a compilar] remove --user=</span><span style="color: #A31515">&quot;usuario&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;titulo de la nota&quot;</span>
+
+<span style="color: #000000">// MODIFICAR UNA NOTA</span>
+<span style="color: #000000">$ node [ruta del archivo a compilar] modify --user=</span><span style="color: #A31515">&quot;usuario&quot;</span><span style="color: #000000"> --title=</span><span style="color: #A31515">&quot;titulo de la nota&quot;</span><span style="color: #000000"> --text=</span><span style="color: #A31515">&quot;contenido de la nota&quot;</span><span style="color: #000000"> --color=</span><span style="color: #A31515">&quot;color de la nota (red, green, yellow, blue)&quot;</span>
+</code></pre>
+				<p>Cada una de estas funcionalidades las desarrollaremos aparte de forma modular de la siguiente forma: </p>
+				<ul>
+					<li>El método <code>addNewNote()</code> será el encargado de crear un nuevo archivo <strong>.json</strong> con el contenido de la nota. En el caso de intentar crear una nota para un usuario nuevo creará un directorio para las notas de este. Si la nota ya estuviera creada saltará un error. Trabajamos como mencionamos anteriormente en formato <strong>JSON</strong>, por lo tanto debemos crear nuestros archivos en ese formato, el cual se verá de la siguiente forma: </li>
+				</ul>
+				<pre><code class="language-json"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;user&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;usuario&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;title&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;titulo de la nota&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;text&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;contenido de la nota&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #0451A5">&quot;color&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;color de la nota&quot;</span><span style="color: #000000"> </span><span style="color: #008000">// ---&gt; colores disponibles: Red, Yellow, Green, Blue</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>Para este método utilizamos <code>fs.existSync()</code> una función de <strong>Node.js</strong> que comprueba que la ruta que le proporcionamos existe, también <code>writeFileSync()</code> que la utilizaremos para insertar el contenido en <strong>JSON</strong> en el archivo correspondiente y <code>mkdirSync()</code> que nos ayudará a crear el directorio del usuario en caso de ser necesario.
+				También utilizaremos <code>stringify()</code>, una método para los objetos tipo <strong>JSON</strong> que convertirá los datos que le hemos proporcionado en el formato que mencioné anteriormente en una cadena de texto tipo <strong>JSON</strong>.</p>
+				<ul>
+					<li><p>El método <code>listNotes()</code> filtrará las notas que tiene un usuario en concreto y mostrará los títulos de las notas en su colores correspondientes. Para esto hemos utilizado la función de <strong>Node.js</strong> <code>readdirSync()</code> que almacenará en un vector de strings el nombre de los archivos encontrados en el directorio indicado. Utilizaremos también la función <code>parse()</code> para los objetos tipo <strong>JSON</strong> que convierte una cadena en formato <strong>JSON</strong> en un objeto, por lo tanto seremos capaces de acceder a sus parámetros y tratar correctamente la información en este formato. Utilizaremos también el método <code>printTitle()</code> que creamos en la clase <code>Note</code>.</p>
+					</li>
+					<li><p>El método <code>readNotes()</code> mostrará el contenido de una nota en concreto por pantalla, por lo tanto debemos proporcionarle el usuario y el título de la nota. Para realizar esto haremos uso de la función de <strong>Node.js</strong> <code>readFileSync()</code> que simplemente lee todo el contenido de un archivo, debemos especificarle la codificación <strong>(utf-8)</strong> para poder trabajar sin problemas de esta forma. Además de eso tomaremos en cuenta todo lo que hemos mencionado anteriormente sobre el formato JSON. En esta ocasión utilizaremos los métodos de impresión que creamos en la clase <code>Note</code>. </p>
+					</li>
+					<li><p>El método <code>removeNotes()</code> se encargará de eliminar notas ya creadas mediante la función <code>fs.rmSync()</code> de <strong>Node.js</strong> a la que solo debemos proporcionarle la ruta y eliminará el archivo que le indiquemos. Este método, como el resto, realiza comprobaciones de la existencia de lo que le sugerimos, si nos equivocamos lo indicará. De la misma manera confirmará que las acciones que le pedimos se realizan correctamente.</p>
+					</li>
+					<li><p>El método <code>modifyNote()</code> será el responsable de llevar a cabo las modificaciones que queramos hacer a nuestras notas. Para ello eliminará la nota antigua y creará una nueva nota con los cambios solicitados, siendo así posible cambiar cualquier parámetro de la nota menos el usuario al que pertenece.</p>
+					</li>
+					<li><p>El método <code>spacesToBars()</code> será un método auxiliar que sustituirá los espacios por barras bajas para evitar problemas al crear los nombres de los archivos con espacios, le proporcionaremos el título de nuestra nota y este le dará el formato que queremos para que sea el título del archivo <strong>.json</strong>.</p>
+					</li>
+				</ul>
+				<a href="#conclusión" id="conclusión" style="color: inherit; text-decoration: none;">
+					<h3>Conclusión</h3>
+				</a>
+				<p>En esta práctica hemos desarrollado nuestros conocimientos en sistemas de archivos con <strong>Node.js</strong> que considero extremadamente importante para muchas situaciones y además nos hemos familiarizado con el formato <strong>JSON</strong> que resulta muy útil para el filtrado de la información. En general ha sido una práctica muy enriquecedora e interesante. </p>
+				<a href="#bibliografía" id="bibliografía" style="color: inherit; text-decoration: none;">
+					<h3>Bibliografía</h3>
+				</a>
+				<p><a href="https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/">Guión de la práctica 8</a></p>
+				<p><a href="https://ull-esit-inf-dsi-2021.github.io/nodejs-theory/nodejs-intro.html">Introducción a Node.js</a></p>
+				<p><a href="https://ull-esit-inf-dsi-2021.github.io/nodejs-theory/nodejs-filesystem.html">Sistema de ficheros en Node.js</a></p>
+				<p><a href="https://www.npmjs.com/package/yargs">Yarg</a></p>
+				<p><a href="https://www.npmjs.com/package/chalk">Chalk</a></p>
+				<p><a href="https://nodejs.org/dist/latest-v15.x/docs/api/fs.html#fs_synchronous_api">API síncrona (Node.js)</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -86,16 +146,16 @@
 					<li class=" ">
 						<a href="modules.html">Exports</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/note.html">note</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/note_app.html">note-<wbr>app</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-function">
-						<a href="modules.html#add" class="tsd-kind-icon">add</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="modules.html#substract" class="tsd-kind-icon">substract</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -105,6 +165,9 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
